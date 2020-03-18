@@ -14,7 +14,7 @@ with open('calls.csv', 'r') as f:
 
 """
 TASK 1:
-How many different telephone numbers are there in the records? 
+How many different telephone numbers are there in the records?
 Print a message:
 "There are <count> different telephone numbers in the records."
 """
@@ -34,19 +34,24 @@ Print a message:
 # each time a number comes up, compare it to the list
 # if the number exists, ignore it
 # if it is new, add it to the list
-numlist = []
-
-def addNumber():
-    
-
-def getNumber(texts):
-    for i in texts:
-        print(i)
+# initialize my_set
+num_set = set()
 
 
-getNumber(texts)
+def getData(data):
+    for i in data:
+        num_set.add(i[0])
+        num_set.add(i[1])
+
+
+getData(texts)
+getData(calls)
+
+print(f"There are {len(num_set)} different telephone numbers in the records.")
+
 
 # def test():
+#     print("Tests finished")
 
 
 # test()
