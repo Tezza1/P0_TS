@@ -19,17 +19,17 @@ Print a message:
 "There are <count> different telephone numbers in the records."
 """
 
-# Understand inputs
+# UNDERSTAND INPUTS
 # get all sent numbers from texts
 # get all received numbers from texts
 # get all sent numbers from calls
 # get all received number from calls
 
-# Understand the outputs
+# UNDERSTAND THE OUTPUTS
 # get a list of all unique numbers
 # count the list to get a final number
 
-# Consider systematically how a human solves the problem
+# CONSIDER SYSTEMATICALLY HOW A HUMAN SOLVES THE PROBLEM
 # go through the list and make a list of new numbers
 # each time a number comes up, compare it to the list
 # if the number exists, ignore it

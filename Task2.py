@@ -20,3 +20,35 @@ Print a message:
 September 2016.".
 """
 
+# UNDERSTAND INPUTS
+# get all sent numbers from calls
+# get the time spent on a call
+
+# UNDERSTAND THE OUTPUTS
+# get the number that spent the longest time on a call
+
+# CONSIDER SYSTEMATICALLY HOW A HUMAN SOLVES THE PROBLEM
+# set the first number as the benchmark
+# go through the list and if a call duration is the longer, set it as the benchmark
+num = ''
+duration = 0
+
+
+def getData(data):
+    num = data[0][0]
+    duration = int(data[0][3])
+    for i in data:
+        if(int(i[3]) > duration):
+            num = i[0]
+            duration = int(i[3])
+    print(f"{num} spent the longest time, {duration} seconds, on the phone during September 2016.")
+
+
+getData(calls)
+
+
+# def test():
+#     print("Tests finished")
+
+
+# test()
