@@ -43,3 +43,45 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
+# PART A
+# UNDERSTAND INPUTS
+# get all sent numbers from calls
+# find the sent calls that start with (080)
+
+# UNDERSTAND OUTPUTS
+# all prefixes & first 3 numbers of a mobile call
+
+# CONSIDER SYSTEMATICALLY HOW A HUMAN SOLVES THE PROBLEM
+# go through the list
+# if the number starts with (080)
+# then if it is a landline get the prefix
+# else get the first 4 digits
+num_set = set()
+prefix_set = set()
+sorted_prefix = []
+
+
+def getData(data):
+    for i in data:
+        caller = i[0]
+        if (caller[0] == '('):
+            if(caller[1] == '0' and caller[2] == '8' and caller[3] == '0'):
+                num_set.add(i[1])
+    for j in num_set:
+        if (j[0] == '('):
+            prefix = j[1:]
+            sep = ')'
+            prefix = prefix.split(sep, 1)[0]
+            prefix_set.add(prefix)
+            sorted_prefix = sorted(prefix_set, key=int)
+    print(prefix_set)
+
+
+getData(calls)
+
+
+def test():
+    print("Tests completed")
+
+
+test()
